@@ -40,7 +40,7 @@ d3.json(earthquake_url).then(data => {
             return L.circleMarker(latlng, {
                 radius: feature.properties.mag*2,
                 fillColor: getColor(feature.geometry.coordinates[2]),
-                color: "black",
+                color: "grayk",
                 weight: 1
             });
         },
