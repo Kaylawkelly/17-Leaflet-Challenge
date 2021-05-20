@@ -14,22 +14,22 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: API_KEY
 }).addTo(myMap);
 
-function getColor(depth) {
+function getColor(mag) {
     var circleColor = "green";
-    if (depth > 90) {
+    if (mag > 90) {
         circleColor = "red";
     }
-    else if (depth > 70) {
-        circleColor = "#eb5e34";
+    else if (mag > 70) {
+        circleColor = "orange";
     }
-    else if (depth > 50) {
-        circleColor = "#eb9f34";
+    else if (mag > 50) {
+        circleColor = "#light orange";
     }
-    else if (depth > 30) {
-        circleColor = "#ebd334";
+    else if (mag > 30) {
+        circleColor = "#yellow";
     }   
-    else if (depth > 10) {
-        circleColor = "#e2eb34";
+    else if (mag > 10) {
+        circleColor = "#bright yellow";
     }
     return circleColor;
 }
