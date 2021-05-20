@@ -40,7 +40,7 @@ d3.json(earthquake_url).then(data => {
             return L.circleMarker(latlng, {
                 radius: feature.properties.mag*2,
                 fillColor: getColor(feature.geometry.coordinates[2]),
-                color: "grayk",
+                color: "gray",
                 weight: 1
             });
         },
@@ -53,7 +53,7 @@ d3.json(earthquake_url).then(data => {
             legend.onAdd = function() {
             var div = L.DomUtil.create("div", "info legend");
             var limits = ["-10-10", "10-30", "30-50", "50-70", "70-90", ">90"];
-            var colors = ["green", "#e2eb34", "#ebd334", "#eb9f34", "#eb5e34", "red"];
+            var colors = ["green", "bright yellow", "yellow", "light orange", "orange", "red"];
             var labels = [];
 
             limits.forEach(function(limit, index) {
